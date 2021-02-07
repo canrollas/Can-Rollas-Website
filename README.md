@@ -64,6 +64,6 @@ cond(no)->crash
 
 ## Licence & copyright
 
-© Can Rollas , Grundig Desktop Remote Controller
+© Can Rollas , Own website template
 
 Lİcensed under the [Apache License](LICENSE).
