@@ -55,4 +55,15 @@ cond(no)->crash
 ```
 #### How to run the website
 - just run the app.py after installation of flask etc.
+#### Previews with pictures
+- It will be on my domain in a few weeks
 
+![](https://github.com/canrollas/Can-Rollas-Website/blob/main/image.png)
+![](https://github.com/canrollas/Can-Rollas-Website/blob/main/image2.png)
+![](https://github.com/canrollas/Can-Rollas-Website/blob/main/image3.png)
+
+## Licence & copyright
+
+© Can Rollas , Grundig Desktop Remote Controller
+
+Lİcensed under the [Apache License](LICENSE).
