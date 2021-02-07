@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+
+{% block can_rollas %}
+
+
+{% from "includes/former.html" import render_field %}
+<div class="card">
+    <h5 style="text-align:center;" class="card-header ">Kayıt</h5>
+    <div class="card-body">
+        <h5 style="text-align:center;" class="card-title">Hoşgeldiniz</h5>
+        <p style="text-align: center;" class="card-text">Aşagıdaki kayıt formunu doldurarak yeni girdilerden olabilirsiniz :)</p>
+        <form method=post style="text-align: center;">
+            <dl>
+                <script>
+                    function getURL() {
+                        alert("Kullanıcı adı veya mail onceden kullanılmıs!");
+                    }
+                    var url=window.location.href;
+                    var n = url.includes("failed");
+                    if(n){
+                        getURL();
+                        history.replaceState('?unsucces', 'register', '/register');
+                        window.history.go(-1);
+                    }
+                </script>
+                {{ render_field(form.name) }}
+                {{ render_field(form.email) }}
+             
+            </dl>
+            <p><input class="btn btn-primary bg-dark" type=submit value="Kaydol">
+        </form>
+
+    </div>
+</div>
+{% endblock %}

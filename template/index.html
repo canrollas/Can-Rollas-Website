@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block can_rollas%}
+<script>
+    function getURL() {
+        alert("Başarılı giriş yaptınız!");
+    }
+    var url=window.location.href;
+    var n = url.includes("succes");
+    if(n){
+        getURL();
+        history.replaceState('?succes', 'index', '/');
+    }
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <br>
+            <div class=".d-sm-none .d-md-block">
+                <h6>GitHub Proje Lİnkleri</h6>
+                <a href="https://github.com/canrollas/Remote-Controller">● Remote controller</a><br>
+                <a href="https://github.com/canrollas/Iyte-Mail-Bot">● Zimbra mail bot</a><br>
+                <a href="https://github.com/canrollas/Game-Chracter-Movement-With-c-sharp">● Oyun karakteri hareket konrolü</a><br>
+                <a href="https://github.com/canrollas/Websites-i-have-created">● Yaptıgım websiteleri</a><br>
+                <a href="https://github.com/canrollas/Website-Template">● Bu web sitesi</a><br>
+                <h6>Sosyal medya linkleri</h6>
+                <a href="https://twitter.com/RollasCan">● Twitter</a><br>
+                <a href="https://www.instagram.com/rollas.c/">● Instagram</a><br>
+                <a href="https://github.com/canrollas">● Github</a><br>
+                <a href="https://www.linkedin.com/in/can-rollas-198248b5/">● Linkedin</a><br><br>
+                
+
+                <p>© Can Rollas website</p>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <h1 style="text-align: center;">Motion Capture Üzerine </h1><br>
+            <p> &nbsp Oyunlar dünden bugüne hayatımızın bir parçası olmuştur. Kimi zaman bilgisayar,konsol
+                başında saatlerimizi harcadık veya oyunun ilk 5 dakikasını oynayıp kapadık. Aslında bunlardan
+                bağımsız olarak pek çoğunuzun da ismini sıkça duyduğu bir ham konu ile giriş yapıp sonrasında bu
+                konu üzerinde gelişmiş bir teknoloji bütününe değineceğim.<br><br>
+
+                &nbsp Oyun mekanikleri oyunun içerisinde
+                herhangi bir eylemin sürekliliğin sağladığımız veya tekrar tekrar yaparak bir bundan bir karşılık veya
+                yarar sağladığımız yapılardır. Eğer sizin için çok tanımsal olduysa şöyle açıklayalım oyun
+                içerisindeyken yürümeniz veya siper almanız bir hareket mekaniğidir, oyun içerisinde xp
+                collectelemeniz başka bir mekaniktir. Yani oyun içerisinde gördüğünüz tüm bağlamlar bütünü
+                oyunun oynanmasını sağlayan mekaniklerdir. Konumuzu daha da özelleştirmemiz gerekirse fizik
+                mekanikleri bir oyunda temel olarak hareket tırmanma vs. halleden mekaniklerdir. En basit örnek ise
+                yön tuşuna bastığımızda bastığımız yöne doğru ilerleyen oyun karakterimiz diyebiliriz.
+                Bilgisayarınızda oyun oynarken bir çatışma çıkıyor ve siper almanız gerekiyor ve siper almak için x
+                tuşuna bastığınızı var sayalım. İlk olarak mekaniğimiz etrafta siper alınabilir bir en yakın objeyi ve
+                yüzünüzün dönük olduğu tarafı da göz önünde bulundurarak objenin etrafında bir animasyonla
+                beraber siper almanızı sağlıyor. Eğer bu konuyu biraz daha derinleştirecek olursak oyunumuz açık
+                iken bilgisayar oyunumuz x tuşunun ascii kodunun programımıza girildiğini ve daha önceden
+                tanımlanmış olan kod bütününü aktive etmesini sağlıyor. Bu kod bütünleri genel olarak oyun
+                camiasında sağlam veri yapıları içeren c++ dili ile oluyor çünkü bu dil object oriented şekilde işlediği
+                için ana programımıza giren x tuşuna basıldı bildirisi aynı dosya patindeki başka bir veri yapısını
+                uyarıyor ve ana programımıza veri yapısının yaptığı metotlar kalıtımla beraber aktarılıp istenilen
+                işlem gerekiyor. Kafanız karışmış ise şöyle diyelim;tuşa basıldığına özel yazılmış kodlar bütünü
+                beraber çalışıp tanımlanmış isi oyun içerisinde yapıyor. Hatta günümüzde de fizik programcısı
+                seklinde Türkçeleştirebileceğimiz oyun firmalarının is ilanları mevcut. Mekaniklerde ise güzel kısım
+                burada devreye giriyor. Her fizik hareketini kodlama ile çözmemiz oyunun tamamıyla sistem boğucu
+                ve üretim sürecinin sancılı geçmesine sebep olmasına yol açmaktan başka bir şeye yaramaz. O halde
+                ne yapmalıydık diye düşünebiliriz. Cevabımız ise iki yabancı kelimeye gizlenmiş şekilde karsımıza
+                çıkıyor : Motion Capture
+                <br><br>
+                1980 li yılların ortalarında artık oyunlar geleceğe yönelik bir yatırım olarak görülen bir olası
+                piyasayı gözler önüne seriyordu. O yıllarda oyun firmalarının arasında Amerika ve Rusya gibi bir
+                soğuk savaş mevcuttu ve sürekli oyun geliştirme süreçleri o zamana göre devasa şekilde
+                ilerliyordu.Oyunların günümüzdeki animasyon fikrinin dogması ise 1984 yılına dayanıyor.Jordan
+                mecher tarafından 1984 yılında martial arts etiketiyle piyasaya sürülen “KARETEKA” isimli oyun yeni
+                bir teknolojiyi oyunlara dahil etmişti. Bu teknolojinin adı ise “ROTOSKOP”tu. Rotoskop ile beraber
+                oyun içerisinde önceden hareketleri incelenmiş gerçek bir insanın hareketleri oyun içerisine
+                aktarılıyordu. Aktarma işlemi ise kameraya alınmış oyuncunun hareketlerinin framelere bölünüp
+                çizilerek bu çizimlerin oyunlara aktarılmasıyla sağlanıyordu. O zamanlarki teknoloji yeterli
+                elverişliliğe
+                sahip olmadığından kodlanan oyunda vurma animasyonu ilerleme koşma zıplama gibi veya tekme
+                gibi sadece temel animasyonlar aktarılabiliyordu. Bundan feyz alan oyun camiası ise bu yeni yöntem
+                üzerine oyunlar çıkarmıştı. Bu teknolojiyi kullanan en fazla bildiğimiz,yıllarca ağzımızdan ve
+                sıralamamızdan düşmeyecek oyun ise “Prince of persia”idi. Prince of persia da ilk oyunu bu sistemi
+                kullanarak 1989 yılında piyasaya çıkmıştı (yine aynı kişi tarafından).üstelik Jordan Mecher bu seferki
+                oyunla beraber tam anlamıyla cağına devrim getirmiş ve tüm piyasayı kasıp kavurmuştu. Mecher
+                kendi kardeşi David’i videoya alarak hareketlerini bir kameraya kaydetmiş ve bu hareketleri oyuna
+                aktarmıştı. Devrine göre inanılmaz olan oyunun animasyonlarının temeli olan Mecherin kardeşi
+                David’in videolarını youtubeda bulabilirsiniz.<br><br>
+                <a href="https://www.youtube.com/watch?v=ZW_eExHpTZI">●
+                    https://www.youtube.com/watch?v=ZW_eExHpTZI</a><br><br>
+                &nbsp Aradan yıllar geçmişti ve birçok oyun artık bu yöntemi kullanarak zamanına göre efsane
+                animasyonlar ve mekanikler eklemişti. O zamanlar bu olay ise şöyle işliyordu tanımlı tuşa bastığınızda
+                karakteriniz önceden çizilmiş animasyonu sergiliyordu. Ancak girişte de anlattığım gibi sadece
+                animasyon veya kodla çözülebilecek bir olay değildi bu. Bunun böyle islemeyeceğini fark eden oyun
+                yapımcıları ise teknolojik olarak o zamanlar yeni yeni var olan bir teknolojiye başvurmuşlardı. Bu
+                teknoloji sayesinde bilgisayar otomatik olarak oyuncunun vücut hareketlerini önceden cizilmis olan
+                oyun karakteriyle birleştiriyor ve hem kodların hem de animasyonların uyumlu çalışmasıyla
+                günümüzde mükemmel oyunlar çıkarmamıza olanak sağlıyordu. Tüm animasyonları kodlarla yapınca
+                oluşan hantallık ve tamamen videodan oluşan oyundaki boşluk aslında bu teknolojiyle ortadan
+                kalkmış ve oyun evreni tekrardan cağ atlamıştı. İlk zamanlarda ise bunu sadece oyunlara eklenen
+                sinematik sahnelere koysalar da ileride oyunun daha etkili olması için çoğu firma bunun için özel
+                stüdyolar kuracaktı. Motion capture teknolojisinin çalışma prensibi tamamen kamera tarafından
+                oyuncu üzerindeki pointerların sanal ortama aktarılmasıyla elde ediliyor. Bunun temel yapısı ise
+                image processing dediğimiz bilgisayar bilimi kapsayan bir teknolojiydi.Temel olarak bu yapı bir
+                fotoğrafı ya da videoyu kameralar aracılığıyla alıp sonrasında makinelerin otomatik olarak
+                fotoğraftaki verileri yorumlayıp kaydetmesine dayanmaktadır. Günümüzde ise motion capture
+                teknolojisi fizik mekaniğinde sinematik sahnelerde etkili olarak kullanılmaktadır bunların güzel
+                orneklerinden birisi ise benim de mükemmel bulduğum God of War 4tür.Dipnot(“Bu teknoloji
+                oyunlardan önce genelde filmlerde kullanılırdı.”)<br><br>
+                <a href="https://www.youtube.com/watch?v=yz4C_ZdFNWw&t=257s">●
+                    https://www.youtube.com/watch?v=yz4C_ZdFNWw&t=257s</a><br><br>
+
+                Oyunların animasyon ve fizik mekaniklerinin incelemesini ve oyunlara gelen büyük
+                teknolojisinin detaylarını yukarıda gösterdim umarım yazımdan zevk almış ve biraz oyunların
+                arkasında bulunan mutfak kısmına sizi de yakınlaştırdıysam ne mutlu bana.Bu yazıyı yazmamın temel amacı
+                ise
+                aslında benim de motion capture ile algılanabilecek bir teknolojiye merak duymam ve bu alana makine
+                ogrenmesi,yapay zeka
+                ile ileride yogunlasmak istemem.İyi oyunlar dilerim :)
+                <br><br>
+                Referanslar:
+                <br>
+                Prince of persia [Online video] 1985 retrieved december 15,2019 from<br>
+                <a href="www.youtube.com/watch?v=ZW_eExHpTZI">www.youtube.com/watch?v=ZW_eExHpTZI</a><br>
+                God of war beind the scenes [Online video] (n.d.) retrieved december 15,2019 from<br>
+                <a
+                    href="https://www.youtube.com/watch?v=yz4C_ZdFNWw&t=257s">https://www.youtube.com/watch?v=yz4C_ZdFNWw&t=257s</a><br><br><br>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block title %}
+
+Ana Sayfa
+
+{% endblock %}
