@@ -1,6 +1,6 @@
 ### Features
 
-- Basic html bootstrap design
+- Basic html bootstrap design and python flask usage
 - 8 html pages
 - 1 python main file
 - Responsive bootstrap design
@@ -11,9 +11,7 @@
 ### Which types of algorithms/patterns used in this basic project
 **Table of Contents**
 
-[TOCM]
 
-[TOC]
 ## Get redirect post pattern
 
 - Basic knowledge of internet protocol reqires get redirect post pattern to get rid of resubmit error
@@ -41,7 +39,6 @@ form->controller
 controller(yes)->redirect1
 controller(no)->redirect2
 cond(no)->crash
-
 
 ```
 
